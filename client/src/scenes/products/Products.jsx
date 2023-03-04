@@ -20,11 +20,10 @@ export default function Products() {
           gridTemplateColumns="repeat(4,minmax(0,1fr))"
           justifyContent="space-between"
           rowGap="20px"
-          columnGap="1.33%
-          "
+          columnGap="1.33%"
           sx={{
             "& > div": {
-              gridColumn: isNonMobile ? undefined : "span 4"
+              gridColumn: isNonMobile ? undefined : "span 4",
             }
           }}
         >
@@ -36,8 +35,9 @@ export default function Products() {
         </Box>
       ) : (
         <>Loading...</>
-      )}
-    </Box>
+      )
+      }
+    </Box >
   )
 }
 
@@ -67,7 +67,7 @@ const Product = ({ product }) => {
       <CardContent>
         <Typography
           sx={{ fontSize: 14 }}
-          color={theme.palette.secondary[700]}
+          color={theme.palette.secondary[400]}
           gutterBottom
         >
           {category}
