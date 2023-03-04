@@ -12,7 +12,9 @@ import salesRoutes from "./routes/sales.js"
 
 // data imports
 import User from "./models/User.js";
-import { dataUser } from "./data/index.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import { dataProductStat, dataUser, dataProduct } from "./data/index.js";
 
 
 /* CONFIGURATION */
@@ -37,10 +39,12 @@ app.use("/sales", salesRoutes)
 const PORT = process.env.PORT || 9000;
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 }).then(() => {
   app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
   /* ONLY ADD ONE TIME */
-  User.insertMany(dataUser)
+  // User.insertMany(dataUser)
+  // Product.insertMany(dataProduct)
+  // ProductStat.insertMany(dataProductStat)
 }).catch(error => console.log(`${error} did not connect`));
