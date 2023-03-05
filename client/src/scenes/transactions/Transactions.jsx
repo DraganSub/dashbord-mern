@@ -22,7 +22,6 @@ export default function Transactions() {
     sort: stringifiedSort,
     search
   });
-  console.log("🚀 ~ file: Transactions.jsx:19 ~ Transactions ~ data:", data)
 
   const columns = [
     {
