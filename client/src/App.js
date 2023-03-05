@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles"
 import { useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { themeSettings } from "theme";
-import { Dashboard, Layout, Products, Customers, Transactions } from "scenes";
+import { Dashboard, Layout, Products, Customers, Transactions, Geography, Overview } from "scenes";
 import { useMemo } from "react";
 
 function App() {
@@ -22,6 +22,8 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/transactions" element={<Transactions />} />
+              <Route path="/geography" element={<Geography />} />
+              <Route path="/overview" element={<Overview />} />
             </Route>
           </Routes>
         </ThemeProvider>
